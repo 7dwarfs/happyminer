@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style rel="stylesheet">
+    @font-face {
+        font-family: "qq2";
+        src: url("../font/qq2.ttf") format("truetype");
+    }
+    @font-face {
+        font-family: "t3";
+        src: url("../font/t3.ttf") format("truetype");
+	}
+    body {
+        overflow: hidden;
+        background-color: rgba(0,0,0,0);
+    }
+    #win {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 521px;
+        text-align: center;
+        background: url(../img/background.png) no-repeat;
+        background-size: 100%;
+        /*background-color: black;*/
+        /*border-radius: 30px;*/
+        /*box-shadow: 4px 4px 5px grey;*/
+        /*-webkit-app-region: drag;*/
+        object-fit: cover;;
+    }
+    .people {
+        position: relative;
+        top: 50px;
+        float: left;
+        width: 215px;
+        height: 424px;
+        background: url(../img/people.png) no-repeat;
+        background-size: 100%;
+    }
+    .select {
+        position: relative;
+        left: -55px;
+        float: left;
+        width: 258px;
+        height: 47px;
+        margin-top: 120px;
+        font-family: qq2;
+        font-size: 28px; 
+        text-align: left;
+        text-indent: 22px;
+        color: #c35e00;
+        background: url(../img/select.png) no-repeat;
+        background-size: 100% 100%;
+		cursor:pointer;
+    }
+    .select2 {
+        position: relative;
+        left: -55px;
+        float: left;
+        width: 258px;
+        height: 47px;
+        margin-top: 115px;
+        margin-left: 10px;
+        font-family: qq2;
+        font-size: 28px; 
+        text-align: left;
+        text-indent: 22px;
+        color: #c35e00;
+        background: url(../img/select.png) no-repeat;
+        background-size: 100% 100%;
+		cursor:pointer;
+    }
+    .inputimg {
+        clear: both;
+        width: 454px;
+        height: 163px;
+        margin-top: 10px;
+        background: url(../img/input.png) no-repeat;
+        background-size: 100% 100%;
+    }
+    .textareclass {
+        width: 380px;
+        height: 140px;
+        padding-top: 28px;
+        padding-right: 50px;
+        padding-left: 50px;
+        border: none;
+        font-family: qq2;
+        line-height: 36px;
+        font-size: 32px; 
+        color: #c35e00;
+        outline: none;
+        background: transparent;
+    }
+    .textareclasshastext {
+        width: 380px;
+        height: 140px;
+        padding-top: 28px;
+        padding-right: 50px;
+        padding-left: 50px;
+        border: none;
+        font-family: t3;
+        line-height: 36px;
+        font-size: 32px; 
+        color: #c35e00;
+        outline: none;
+        background: transparent;
+    }
+    textarea {
+        resize: none;
+    }
+    .down1 {
+        position: absolute;
+        top: 50px;
+        left: 5px;
+        display: none;
+        width: 252px;
+        min-height: 50px;
+        font-family: qq2;
+        color: #c35e00;
+        border-radius: 0 0 16px 16px;
+        background: #fffeea;
+        box-shadow: 2px 1px 3px 0 rgba(244, 202, 152, .75);
+		cursor:pointer;
+    }
+    .down2 {
+        position: absolute;
+        top: 50px;
+        left: 5px;
+        display: none;
+        width: 252px;
+        min-height: 50px;
+        font-family: qq2;
+        color: #c35e00;
+        border-radius: 0 0 16px 16px;
+        background: #fffeea;
+        box-shadow: 2px 1px 3px 0 rgba(244, 202, 152, .75);
+		cursor:pointer;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+    ul li {
+        width: 240px;
+        height: 30px;
+        margin: 10px auto;
+        line-height: 30px;
+        list-style-type: none;
+        border-radius: 8px;
+        background: #ffecc3;
+		cursor:pointer;
+    }
+    .selcetvalue1,
+    .selcetvalue2 {
+        line-height: 40px;
+		cursor:pointer;
+    }
+    .error_btn {
+        float: left;
+        width: 65px;
+        height: 63px;
+        margin-top: 5px;
+        margin-left: 110px;
+        background: url(../img/cancelgary.png) no-repeat;
+        background-size: 100% 100%;
+		cursor:pointer;
+    }
+    .sure_btn {
+        float: left;
+        width: 65px;
+        height: 63px;
+        margin-top: 5px;
+        margin-left: 60px;
+        background: url(../img/suregary.png) no-repeat;
+        background-size: 100% 100%;
+		cursor:pointer;
+    }
+    .error_btn2 {
+        float: left;
+        width: 65px;
+        height: 63px;
+        margin-top: 5px;
+        margin-left: 110px;
+        background: url(../img/cancelred.png) no-repeat !important;
+        background-size: 100% 100% !important;
+		cursor:pointer;
+    }
+    .sure_btn2 {
+        float: left;
+        width: 65px;
+        height: 63px;
+        margin-top: 5px;
+        margin-left: 60px;
+        background: url(../img/suregreen.png) no-repeat !important;
+        background-size: 100% 100% !important;
+		cursor:pointer;
+    }
+    @keyframes star {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(.8);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+    </style>
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=Edge">-->
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0">
+</head>
+<body>
+    <div id="win">
+        <div class="people">
+        </div>
+        <div style="float: left;">
+            <div class="select" id="select1" onclick="showselect1()">
+                <span class="selcetvalue1" id="selcetvalue1">所在地区</span>
+                <ul class="down1" id="down1">
+                    <li>中国</li>
+                    <li>欧洲</li>
+                    <li>美国</li>
+                    <li>东南亚</li>
+                    <li>韩国</li>
+                    <li>日本</li>
+                </ul>
+            </div>
+            <div class="select2" id="select2" onclick="showselect2()">
+                <span class="selcetvalue2" id="selcetvalue2">连接矿池</span>
+                <ul class="down2" id="down2">
+                    <li>星火大陆</li>
+                    <li>鱼池</li>
+                </ul>
+            </div>
+            <div class="inputimg">
+                <textarea class="textareclass" id="textareclass" oninput="changtext()"  ondblclick="textclick()" placeholder="请输入账户/钱包地址        双击这里可直接粘贴"></textarea>
+            </div>
+            <div class="btn">
+                <div class="error_btn2" id="error_btn" onclick="clickanimation(this)"></div>
+                <div class="sure_btn" id="sure_btn" onclick="clickanimation(this)"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+var sharedObject = require('electron').remote.getGlobal('sharedObject');
+const {clipboard, Menu} = require('electron').remote;
+const fs= require("fs");
+
+try{
+    var rawdata = fs.readFileSync('settings.json');
+    let setting_json = JSON.parse(rawdata);
+    document.getElementById('selcetvalue1').innerHTML = setting_json['area_sel'];
+    document.getElementById('selcetvalue2').innerHTML = setting_json['pool_sel'];
+	var textArea = document.getElementById('textareclass');
+	textArea.value = setting_json['account'];
+	textArea.setAttribute('class', 'textareclasshastext');
+}
+catch(e){
+}
+
+function textclick() {
+    var textArea = document.getElementById('textareclass');
+    textArea.value = clipboard.readText();
+	textArea.setAttribute('class', 'textareclasshastext');
+    if (document.getElementById('textareclass').value != '' && document.getElementById('selcetvalue2').innerHTML != '连接矿池' && document.getElementById('selcetvalue1').innerHTML != '所在地区') {
+        if (document.querySelector('.sure_btn')) {
+            document.querySelector('.sure_btn').setAttribute('class', 'sure_btn2');
+        }
+    }
+    else {
+        document.querySelector('.sure_btn').setAttribute('class', 'sure_btn');
+    }
+}
+
+function changtext() {
+    var textArea = document.getElementById('textareclass');
+	if (textArea.value != '') {
+		textArea.setAttribute('class', 'textareclasshastext');
+	}
+	else {
+		textArea.setAttribute('class', 'textareclass');
+	}
+    if (textArea.value != '' && document.getElementById('selcetvalue2').innerHTML != '连接矿池' && document.getElementById('selcetvalue1').innerHTML != '所在地区') {
+        if(document.querySelector('.sure_btn'))
+            document.querySelector('.sure_btn').setAttribute('class', 'sure_btn2');
+    }
+    else {
+        document.querySelector('.sure_btn').setAttribute('class', 'sure_btn');
+    }
+}
+
+var num = 0; // 下拉框展示消失
+var num2 = 0; // 下拉框展示消失
+function showselect1() {
+    num++;
+    if (num % 2 == 0) {
+        document.querySelector('.down1').setAttribute('style', 'display:display');
+    }
+    else {
+        document.querySelector('.down1').setAttribute('style', 'display:block');
+    }
+}
+function showselect2() {
+    num2++;
+    if (num2 % 2 == 0) {
+        document.querySelector('.down2').setAttribute('style', 'display:display');
+    }
+    else {
+        document.querySelector('.down2').setAttribute('style', 'display:block');
+    }
+}
+var obj_lis = document.getElementById('down1').getElementsByTagName('li');
+for (i = 0; i < obj_lis.length; i++) {
+    obj_lis[i].onclick = function () {
+        document.getElementById('selcetvalue1').innerHTML = this.innerHTML;
+        if (document.getElementById('textareclass').value != '' && document.getElementById('selcetvalue2').innerHTML != '连接矿池') {
+            if(document.querySelector('.sure_btn'))
+                document.querySelector('.sure_btn').setAttribute('class', 'sure_btn2');
+        }
+        else {
+            document.querySelector('.sure_btn').setAttribute('class', 'sure_btn');
+        }
+
+    };
+}
+
+var obj_lis = document.getElementById('down2').getElementsByTagName('li');
+for (i = 0; i < obj_lis.length; i++) {
+    obj_lis[i].onclick = function () {
+        document.getElementById('selcetvalue2').innerHTML = this.innerHTML;
+        if (document.getElementById('textareclass').value != '' && document.getElementById('selcetvalue1').innerHTML != '所在地区') {
+            if (document.querySelector('.sure_btn'))
+                document.querySelector('.sure_btn').setAttribute('class', 'sure_btn2');
+        }
+        else {
+            document.querySelector('.sure_btn').setAttribute('class', 'sure_btn');
+        }
+    };
+}
+
+function clickanimation(e) {
+    if (e.className == 'sure_btn2' || e.className == 'error_btn2') {
+        document.getElementById(e.id).setAttribute('style', 'animation: star .2s');
+        setTimeout(() => {
+            document.getElementById(e.id).removeAttribute('style');
+
+        }, 500);
+        if(e.className == 'error_btn2') {
+            sharedObject.settingWindow.close()
+        }
+        if(e.className == 'sure_btn2') {
+            account_or_wallet = document.getElementById('textareclass').value.trim().split(" ")[0]
+            account_or_wallet = account_or_wallet.replace(/[\'\"\\\/\b\f\n\r\t]/g, '');  
+            account_or_wallet = account_or_wallet.replace(/[\@\#\$\%\^\&\*\{\}\:\"\L\<\>\?]/);  
+            config = {
+                "area_sel": document.getElementById('selcetvalue1').innerHTML,
+                "pool_sel": document.getElementById('selcetvalue2').innerHTML,
+                "account": account_or_wallet
+            };
+
+            var area2code = {
+                "中国": "cn",
+                "欧洲": "eth-eu",
+                "美国": "eth-us",
+                "东南亚": "asia",
+                "韩国": "kr",
+                "日本": "jp"
+            };
+            config["area"] = area2code[config["area_sel"]]; 
+
+            if(config["pool_sel"] == "星火大陆") {
+                config["pool"] = config["area"] + ".sparkpool.com:3333";
+            };
+            if(config["pool_sel"] == "鱼池") {
+                if(config["account"].startsWith("0x") && config["account"].length > 30){
+                    config["pool"] =  "eth.f2pool.com:8008";
+                }
+                else {
+                    if(config["area"] == "eth-us") {
+                        config["pool"] =  "eth-na.f2pool.com:6688"
+                    }
+                    else if(config["area"] == "eth-eu") {
+                        config["pool"] =  "eth-eu.f2pool.com:6688"
+                    }
+                    else {
+                        config["pool"] =  "eth.f2pool.com:6688"
+                    }
+                }
+            }
+            var data = JSON.stringify(config);
+            fs.writeFileSync('settings.json', data);
+            sharedObject.settingWindow.close()
+        }
+    }
+}
+</script>
+</html>

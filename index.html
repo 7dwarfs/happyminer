@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style rel="stylesheet">
+    @font-face {
+        font-family: "qq5";
+
+        src: url("./font/qq5.ttf") format("truetype");
+    }
+    body {
+        overflow: hidden;
+        background-color: rgba(0,0,0,0);
+    }
+    #win {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 521px;
+        text-align: center;
+        background: url(./img/background.png) no-repeat;
+        background-size: 100%;
+        /*background-color: black;*/
+        /*border-radius: 30px;*/
+        /*box-shadow: 4px 4px 5px grey;*/
+        /*-webkit-app-region: drag;*/
+        object-fit: cover;
+    }
+    .people_box {
+        position: relative;
+		top: 0px;
+        float: left;
+        width: 215px;
+        height: 424px;
+		cursor:pointer;
+    }
+    .people {
+        position: relative;
+		top: 50px;
+        float: left;
+        width: 215px;
+        height: 424px;
+        background: url(./img/people.png) no-repeat;
+        background-size: 100%;
+    }
+    .box {
+        position: relative;
+        float: left;
+        top: -420px;
+		left: 100px;
+        width: 180px;
+        height: 146px;
+        color: black;
+        background: url(./img/box.png) no-repeat;
+        background-size: 100%;
+    }
+    .boxtext {
+        position: relative;
+		left: 0px;
+		top: 30px;
+        width: 120px;
+        height: 80px;
+        border: none;
+        font-family: qq5;
+        font-weight: bold;
+        line-height: 20px;
+        font-size: 20px; 
+        color: #c35e00;
+        outline: none;
+        background: transparent;
+		overflow-x:hidden;
+		overflow-y:hidden;
+    }
+    .treasure_list {
+        position: relative;
+        margin-top: 100px;
+		left: -20px;
+    }
+    .treasure_list > div {
+        position: relative;
+        float: left;
+        width: 122px;
+        height: 116px;
+        font-family: qq5;
+        font-size: 32px;
+        font-weight: bold;
+        line-height: 64px;
+        text-align: center;
+        text-indent: 22px;
+        color: white;
+        text-shadow: 0 1px 0 #772900;
+        background: url(./img/treasure.png) no-repeat;
+        background-size: 100%;
+    }
+    .treasure {
+        background: url(./img/treasure.png) no-repeat !important;
+        background-size: 100% !important;
+        animation: keep 1.5s infinite;
+    }
+    .treagary {
+        background: url(./img/treasuregary.png) no-repeat  !important;
+        background-size: 100% !important;
+        animation: none;
+    }
+    .three_btn {
+        clear: both;
+    }
+
+    .setup_btn {
+        position: relative;
+        top: -70px;
+        left: 20px;
+        float: left;
+        clear: both;
+        width: 112px;
+        height: 54px;
+        margin-left: 180px;
+        font-family: qq5;
+        background: url(./img/setup.png) no-repeat;
+        background-size: 100%;
+        font-size: 34px;
+        line-height: 52px;
+        color:#18699A;
+        text-shadow: 0px 2px 0px rgba(255, 255, 255, 0.75);
+		cursor:pointer;
+    }
+    .start_btn {
+        position: relative;
+        float: left;
+        clear: both;
+        margin-left: 340px;
+        font-family: qq5;
+        font-size: 46px;
+        top: -125px;
+        height: 75px;
+        width: 154px;
+        line-height: 70px;
+        background: url(./img/start.png) no-repeat;
+        background-size: 100%;
+        color:#AC3D00;
+        text-shadow: 0px 2px 0px rgba(255, 255, 255, 0.75);
+		cursor:pointer;
+    }
+    .about_btn {
+        position: relative;
+        top: -200px;
+        left: 25px;
+        float: left;
+        clear: both;
+        width: 116px;
+        height: 56px;
+        margin-left: 500px;
+        font-family: qq5;
+        font-size: 34px;
+        line-height: 52px;
+        background: url(./img/about.png) no-repeat;
+        background-size: 100%;
+        color:#CA2E2E;
+        text-shadow: 0px 2px 0px rgba(255, 255, 255, 0.75);
+		cursor:pointer;
+    }
+    .narrow {
+        position: absolute;
+        top: 45px;
+        right: 90px;
+        height: 60px;
+        width: 62px;
+        background: url(./img/narrow.png) no-repeat;
+        background-size: 100%;;
+		cursor:pointer;
+    }
+    .close {
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        width: 62px;
+        height: 60px;
+        background: url(./img/close.png) no-repeat;
+        background-size: 100%;;
+		cursor:pointer;
+    }
+	.noclick{
+        position: relative;
+		pointer-events: none;
+        font-size: 42px;
+        float: left;
+        clear: both;
+        margin-left: 340px;
+        font-family: qq5;
+        top: -125px;
+        height: 75px;
+        width: 154px;
+        line-height: 70px;
+        background: url(./img/start.png) no-repeat;
+        background-size: 100%;
+        color:#AC3D00;
+        text-shadow: 0px 2px 0px rgba(255, 255, 255, 0.75);
+		cursor:pointer;
+	}
+	.noclickwaiting{
+        position: relative;
+		pointer-events: none;
+        font-size: 22px;
+        float: left;
+        clear: both;
+        margin-left: 340px;
+        font-family: qq5;
+        top: -125px;
+        height: 75px;
+        width: 154px;
+        line-height: 70px;
+        background: url(./img/start.png) no-repeat;
+        background-size: 100%;
+        color:#AC3D00;
+        text-shadow: 0px 2px 0px rgba(255, 255, 255, 0.75);
+		cursor:pointer;
+	}
+    @keyframes keep {
+        0% {
+            transform: scale(.8);
+        }
+        50% {
+            transform: scale(1);
+        }
+        100% {
+            transform: scale(.8);
+        }
+    }
+    @keyframes star {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(.8);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+    </style>
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=Edge">-->
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0">
+</head>
+<body>
+    <div id="win">
+        <div class="narrow" id="narrow" onclick="clickanimation(this);clicknarrow(this)"></div>
+        <div class="close" id="close" onclick="clickanimation(this);clickclose(this)"></div>
+        <div class="people_box" onmouseover="peoplemoveover(this)" onmouseout="peoplemoveout(this)">
+            <div class="people"></div>
+            <div class="box" id="box" style="display:none">
+                <!-- 1234567890123456789012345678 -->
+                <!-- 工地吉格斯塔顶地革工地地地工 -->
+                <textarea class="boxtext" id="boxtext"></textarea>
+            </div>
+        </div>
+        <!-- 挖矿宝箱 -->
+        <div class="treasure_list" id="treasure_list">
+
+        </div>
+        <!-- 设置按钮 -->
+        <div class="setup_btn" id="btn_open_window">
+            设置
+        </div>
+        <!-- 启动按钮 -->
+        <div class="start_btn" id="btn" onclick="clickanimation(this)">
+            开工
+        </div>
+        <!-- 关于按钮 -->
+        <div class="about_btn" id="about" onclick="clickanimation(this);click_about(this)">
+            关于
+        </div>
+        <script src="./render/index.js"></script>
+    </div>
+</body>
+</html>
