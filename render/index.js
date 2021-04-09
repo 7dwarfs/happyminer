@@ -90,7 +90,7 @@ function clickanimation(e) {
     }, 500);
 }
 function clicknarrow(e) {
-	appTray = setTray(app, sharedObject.mainWindow);
+	setTray(app, sharedObject.mainWindow);
 }
 function clickclose(e) {
     global.sharedObject.mainWindow.close()

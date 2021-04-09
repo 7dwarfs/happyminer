@@ -268,7 +268,12 @@ catch(e){
 function textclick() {
     var textArea = document.getElementById('textareclass');
     textArea.value = clipboard.readText();
-	textArea.setAttribute('class', 'textareclasshastext');
+	if (textArea.value != '') {
+		textArea.setAttribute('class', 'textareclasshastext');
+	}
+	else {
+		textArea.setAttribute('class', 'textareclass');
+	}
     if (document.getElementById('textareclass').value != '' && document.getElementById('selcetvalue2').innerHTML != '连接矿池' && document.getElementById('selcetvalue1').innerHTML != '所在地区') {
         if (document.querySelector('.sure_btn')) {
             document.querySelector('.sure_btn').setAttribute('class', 'sure_btn2');
