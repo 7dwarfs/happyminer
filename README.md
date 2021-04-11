@@ -1,36 +1,47 @@
+
+
 # 软件介绍
 
-孩提时代的你一定被[格林童话](https://fairytalez.com/little-snow-white/)中Happy小矮人的故事所吸引，也定曾向往过在神秘的世界里探索、发现属于自己的宝藏，虽然现实没有童话，但技术可以改变世界，“嗨皮矿工”应运而生，它生动有趣、操作简单，又具有令人满意的效率，你选择了它，将成为互联网技术时代的快乐矿工。现在使用嗨皮矿工，一起开启挖掘宝藏的奇妙之旅吧！
+孩提时代的你一定被[格林童话](https://fairytalez.com/little-snow-white/)中Happy小矮人的故事所吸引，也定曾向往过在神秘的世界里探索、发现属于自己的宝藏，虽然现实没有童话，但技术可以改变世界，“嗨皮矿工”应运而生，它生动有趣、操作简单，又具有令人满意的效率。现在使用嗨皮矿工，一起开工大吉！
 
 # 软件特点
 
 * 省心：
-    + 绿色共享、安全可靠，无需担心病毒、系统稳定性、第三方插件、信息泄露等问题
-    + 操作极简，上手容易
-    + 软件界面代码开源
+    + 绿色共享、安全可靠，无需担心病毒、系统稳定性、第三方插件、信息泄露等问题；
+    + 操作极简，上手容易；
+    + 软件界面代码开源。
 
 * 高效：
-    + 自研算法内核，掌握核心技术，提供nvidia最新cuda11.1版本，运行高效
-    + 在网络连接不间断的情况下, 算力波动极小，理论上本地算力与24小时平均算力一致
-    + 更多内容请参考[算力优化手册](https://happyminer.cn/#如何在嗨皮矿工中达到最高算力)
+    + 自研算法内核，掌握核心技术，提供nvidia最新cuda11.1版本，运行高效；
+    + 在网络连接不间断的情况下, 算力波动极小，理论上本地算力与24小时平均算力一致；
+    + 更多内容请参考[算力优化手册](https://happyminer.cn/#如何在嗨皮矿工中达到最高算力)。
 
 * 时尚：
-    + 上海大厂设计师操刀设计，软件界面设计走在时尚前沿
+    + 专业设计师操刀，界面生动，简洁美观；
+    + 个性十足，可根据个人喜好DIY界面。
 
 
-# 软件地址
+# 下载地址
 
-## windows版地址
 
-|版本号|  nvidia cuda 11.1  |   nvidia cuda 10.2(适合旧版驱动，不支持30系显卡) |    amd |   发布时间 |
-|:--|:--|:--|:--|:--|
-|v1.0|[百度云下载 提取码: k93k](https://pan.baidu.com/s/1TPPSwavCe5c0GFsJEtznIA) |[百度云下载 提取码: 7dek](https://pan.baidu.com/s/1M-lxGcoxvmVZGJCMxuNv_w) |    暂不支持    |  |
-
-## linux版地址
+## windows DIY版
 
 |版本号|  nvidia cuda 11.1  |   nvidia cuda 10.2(适合旧版驱动，不支持30系显卡) |    amd |   发布时间 |
 |:--|:--|:--|:--|:--|
-|v1.0|[百度云下载 提取码: vjd2](https://pan.baidu.com/s/1RLl_FSVjaOAgEs8lsnleCg) |[百度云下载 提取码: edqj](https://pan.baidu.com/s/1Sy1COURn9bORVryy0soNRg) |    暂不支持    |   |
+|v1.0|[百度云下载 提取码: g48y](https://pan.baidu.com/s/1Wswd5PA2bWQ5i2cp9vYMXw)  |[百度云下载 提取码: 29cw](https://pan.baidu.com/s/1SHn3qQYG36ZwP-RwiEjaVg)|    暂不支持    | 2021年4月11号 |
+
+## windows版
+
+|版本号|  nvidia cuda 11.1  |   nvidia cuda 10.2(适合旧版驱动，不支持30系显卡) |    amd |   发布时间 |
+|:--|:--|:--|:--|:--|
+|v1.0|[百度云下载 提取码: k93k](https://pan.baidu.com/s/1TPPSwavCe5c0GFsJEtznIA) |[百度云下载 提取码: 7dek](https://pan.baidu.com/s/1M-lxGcoxvmVZGJCMxuNv_w) |    暂不支持    | 2021年4月8号 |
+
+## linux版
+
+|版本号|  nvidia cuda 11.1  |   nvidia cuda 10.2(适合旧版驱动，不支持30系显卡) |    amd |   发布时间 |
+|:--|:--|:--|:--|:--|
+|v1.0|[百度云下载 提取码: vjd2](https://pan.baidu.com/s/1RLl_FSVjaOAgEs8lsnleCg) |[百度云下载 提取码: edqj](https://pan.baidu.com/s/1Sy1COURn9bORVryy0soNRg) |    暂不支持    | 2021年4月8号  |
+
 
 ## github网址
 
